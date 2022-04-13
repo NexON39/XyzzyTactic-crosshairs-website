@@ -1,0 +1,51 @@
+:root {
+    --gray: #8c8c8c;
+    --red: tomato;
+    --bg-gradient: linear-gradient(180deg, rgba(153,0,0,1) 0%, rgba(76,0,0,1) 100%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: white;
+}
+
+.main {
+    background: var(--bg-gradient);
+    height: 90vh;
+}
+
+.main .container {
+    max-width: none;
+    padding: 0;
+}
+
+/* nav */
+.navbar {
+    justify-content: space-between;
+    background: whitesmoke;
+    margin: 2rem 2rem 0 2rem;
+    border-radius: 20px;
+    padding: 0 2rem;
+}
+
+.navbar .logo img {
+    height: 75px;
+}
+
+.navbar .nav ul {
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar .nav ul li a{
+    color: black;
+    font-size: 1.4rem;
+}
