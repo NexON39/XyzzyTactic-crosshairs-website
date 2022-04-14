@@ -5,6 +5,8 @@
     --scroll-dark: rgba(76,0,0,1);
     --white: white;
     --whites: whitesmoke;
+    --discord: rgba(88,101,242,1);
+    --mta: rgba(196,95,20,1);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
@@ -21,13 +23,31 @@ body {
 }
 
 .main {
-    background: var(--bg-gradient);
-    height: 90vh;
+    /* background: var(--bg-gradient); */
+    height: 100vh;
+    background: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100% 100vh;
 }
 
-.main .container {
-    max-width: none;
-    padding: 0;
+/* topbtn */
+.top_btn {
+    display: none;
+    position: fixed;
+    background-color: var(--whites);
+    border: 1px solid var(--scroll);
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+    z-index: 98;
+    bottom: 20px;
+    right: 20px;
+}
+
+.top_btn i {
+    animation: topBtnAnimation 1500ms ease-in-out infinite;
+    font-size: 2rem;
+    color: var(--scroll);
 }
 
 /* nav */
@@ -44,6 +64,8 @@ body {
     height: auto;
     transition: all ease 200ms;
     box-shadow: 0px 2px 5px 0px #000000;
+    overflow: hidden;
+    z-index: 99;
 }
 
 .navbar .logo img {
@@ -72,6 +94,118 @@ body {
 
 .navbar .nav ul li:hover::after {
     width: 100%;
+}
+
+/* home */
+.home-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content .flex {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.home-content .flex:nth-child(2) {
+    position: absolute;
+    bottom: 50px;
+}
+
+.home-content .flex:nth-child(2) p {
+    color: white;
+    background: var(--scroll);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px black solid;
+}
+
+.home-content .home_btns {
+    height: auto;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.home-content .home_btns a{
+    margin: 5px;
+}
+
+.home-content h1 {
+    font-size: 4rem;
+    color: black;
+    text-align: center;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+}
+
+.home-content span {
+    color: var(--scroll);
+}
+
+.home-content .btn {
+    font-size: 1.5rem;
+    width: 200px;
+    padding: 0.25rem 0;
+    text-align: center;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    transition: transform ease-in 100ms;
+}
+
+.home-content .btn:hover {
+    transform: translateY(-5px);
+}
+
+.home-content .home_btns .dsc_btn {
+    background: var(--discord);
+    border: 2px solid #3b4bf7;
+}
+
+.home-content .home_btns .mta_btn {
+    background: var(--mta);
+    border: 2px solid #994608;
+}
+
+.home-content .choose_btn {
+    background: var(--whites);
+    border: 2px solid var(--white);
+}
+
+.text-header {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.text-header h1 {
+    padding: 0 0.5rem;
+    text-align: center;
+    z-index: 2;
+    background: white;
+}
+
+.text-header::before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    background: var(--scroll);
+    width: 300px;
+    left: 50;
+    right: 50;
+    z-index: 2;
 }
 
 /* scrollbar */
