@@ -1,3 +1,10 @@
+let menu_mobile = document.querySelector('.menu-mobile');
+let mobile_btn = document.querySelector('.mobile_btn'); 
+
+mobile_btn.addEventListener('click', function() {
+    menu_mobile.classList.toggle('active');
+})
+
 window.addEventListener('scroll', function() {
     let navbar = document.querySelector('.navbar');
     let top_btn = document.querySelector('.top_btn');
@@ -16,3 +23,4 @@ window.addEventListener('scroll', function() {
         footer.style.bottom = '-50px';
     }
 })
+
