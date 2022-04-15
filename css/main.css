@@ -7,6 +7,7 @@
     --whites: whitesmoke;
     --discord: rgba(88,101,242,1);
     --mta: rgba(196,95,20,1);
+    --bg: #e3e3e3;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
@@ -19,7 +20,8 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    background: var(--white);
+    /* background: var(--white); */
+    background: var(--bg);
 }
 
 .main {
@@ -194,7 +196,7 @@ body {
     padding: 0 0.5rem;
     text-align: center;
     z-index: 2;
-    background: white;
+    background: var(--bg);
 }
 
 .text-header::before {
@@ -206,6 +208,134 @@ body {
     left: 50;
     right: 50;
     z-index: 2;
+}
+
+/* card */
+.crosshairs {
+    margin: 0 0 5rem 0;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background: gray;
+    width: 200px;
+    padding: 2rem 0;
+    border-bottom: 2px var(--scroll) solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-left: 1px solid transparent;
+    border-top:  1px solid transparent;
+    border-right: 1px solid transparent;
+    transition: 200ms ease-in-out border-left, 200ms ease-in-out border-top, 200ms ease-in-out border-right;
+    -webkit-box-shadow: 0px 10px 26px -9px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 10px 26px -9px rgba(0, 0, 0, 1);
+    box-shadow: 0px 10px 26px -9px rgba(0, 0, 0, 1);
+}
+
+.card:hover {
+    border-left: 1px solid var(--scroll);
+    border-top:  1px solid var(--scroll);
+    border-right: 1px solid var(--scroll);
+}
+
+.card .crossimgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--whites);
+    padding: 1rem;
+    border-radius: 20px;
+    transition: transform ease-in-out 200ms;
+}
+
+.card .crossimgs:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.card .crossimgs .imgtop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.card .crossimgs .imgbottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.card .crossimgs img{
+    height: 30px;
+}
+
+.card .downloadform input[type='submit'] {
+    font-size: 1.5rem;
+    width: 150px;
+    background: var(--scroll);
+    color: var(--white);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem 0;
+    border: 1px solid var(--white);
+    transition: transform ease-in 100ms;
+}
+
+.card .downloadform input[type='submit']:hover {
+    transform: translateY(-5px);
+}
+
+.card .crossimgs .imgtop img:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.card .crossimgs .imgtop img:nth-child(2) {
+    transform: rotate(90deg);
+}
+
+.card .crossimgs .imgbottom img:nth-child(1) {
+    transform: rotate(-90deg);
+}
+
+.card .crossimgs .imgbottom img:nth-child(2) {
+    transform: rotate(180deg);
+}
+
+.card p {
+    font-size: 1.2rem;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    background: lightgray;
+    border-top: 2px solid var(--scroll);
+    z-index: 97;
+    transition: bottom 500ms ease-in-out;
 }
 
 /* scrollbar */
