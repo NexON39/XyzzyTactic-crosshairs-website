@@ -3,7 +3,8 @@
 
     function autoload($classname) {
         $paths = array(
-            'includes/'
+            'includes/',
+            '../includes/'
         );
         $ex = '_class.php';
 

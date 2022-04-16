@@ -239,7 +239,7 @@ body {
 
 .home-content .choose_btn {
     background: var(--whites);
-    border: 2px solid var(--white);
+    border: 2px solid var(--bg);
 }
 
 .text-header {
@@ -395,7 +395,7 @@ body {
     background: lightgray;
     border-top: 2px solid var(--scroll);
     z-index: 97;
-    transition: bottom 500ms ease-in-out;
+    transition: bottom 250ms ease-in-out;
 }
 
 /* scrollbar */

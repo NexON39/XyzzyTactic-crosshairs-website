@@ -35,6 +35,25 @@
             }
         }
 
-        public function downloadCrosshair($page){}
+        public function downloadCrosshair($page){
+            $_page = mysqli_real_escape_string($this->connect(), $page);
+            $filepath = '../img/crosshairs/'.$_page.'.png';
+            if(file_exists($filepath)) {
+                $sql = "UPDATE crosshairs SET downloads = downloads+1 WHERE id=$_page";
+                if($this->connect()->query($sql)) {
+                    header('Content-Description: File Transfer');
+                    header('Content-Type: application/octet-stream');
+                    header('Content-Disposition: attachment; filename="'.basename($filepath).'"');
+                    header('Expires: 0');
+                    header('Cache-Control: must-revalidate');
+                    header('Pragma: public');
+                    header('Content-Length: ' . filesize($filepath));
+                    flush();
+                    readfile($filepath);
+                    return true;
+                }
+            } else
+                return false;
+        }
     }
 ?>
