@@ -1,3 +1,6 @@
+// Author: NexON39
+// Discord: NexON39#5665
+
 let menu_mobile = document.querySelector('.menu-mobile');
 let mobile_btn = document.querySelector('.mobile_btn');
 let navbar = document.querySelector('.navbar');

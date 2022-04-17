@@ -1,4 +1,7 @@
 <?php
+// Author: NexON39
+// Discord: NexON39#5665
+
     class effects extends dbconnect {
         public function showEffects() {
             $sql = "SELECT * FROM effects ORDER BY downloads DESC, id ASC;";

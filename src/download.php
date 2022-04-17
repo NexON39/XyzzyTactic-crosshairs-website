@@ -1,4 +1,7 @@
 <?php
+// Author: NexON39
+// Discord: NexON39#5665
+
     require_once "../autoloader/autoload.php";
     $crosshairs = new crosshairs;
     $effects = new effects;

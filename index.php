@@ -1,4 +1,7 @@
 <?php
+    // Author: NexON39
+    // Discord: NexON39#5665
+
     require_once 'autoloader/autoload.php';
     $crosshairs = new crosshairs;
     $effects = new effects;
@@ -12,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XyzzyTactic</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="fa/css/all.min.css">
+    <link rel="stylesheet" href="css/fa/css/all.min.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/main.css">
@@ -86,6 +89,9 @@
     </footer>
 </body>
 
+    
     <script src="js/navbar.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/smooth-scroll.js"></script>
 
 </html>

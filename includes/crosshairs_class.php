@@ -1,4 +1,7 @@
 <?php
+// Author: NexON39
+// Discord: NexON39#5665
+
     class crosshairs extends dbconnect {
         public function showCrosshairs() {
             $sql = "SELECT * FROM crosshairs ORDER BY downloads DESC, id ASC;";
