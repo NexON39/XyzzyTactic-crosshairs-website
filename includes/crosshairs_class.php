@@ -22,8 +22,8 @@
                         echo "</div>";
 
                         echo "<div class='downloadform'>";
-                            echo "<form action='src/download.php?crosshair_id=$row[0]' method='POST'>";
-                                echo "<button type='submit'><i class='fa-solid fa-download'></i> Pobierz</button>";
+                            echo "<form action='src/download.php' method='POST'>";
+                                echo "<button type='submit' value='$row[0]' name='crosshair_id'><i class='fa-solid fa-download'></i> Pobierz</button>";
                             echo "</form>";
                         echo "</div>";
 
