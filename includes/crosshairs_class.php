@@ -1,7 +1,7 @@
 <?php
     class crosshairs extends dbconnect {
         public function showCrosshairs() {
-            $sql = "SELECT * FROM `crosshairs` ORDER BY downloads DESC, id ASC;";
+            $sql = "SELECT * FROM crosshairs ORDER BY downloads DESC, id ASC;";
             $res = $this->connect()->query($sql);
             if($res->num_rows>0) {
                 while($row = $res->fetch_array()) {

@@ -243,7 +243,15 @@ body {
 }
 
 .text-header {
-    margin: 3rem 0;
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.text-header.effects {
+    margin: 5rem 0 4rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -322,7 +330,7 @@ body {
 }
 
 .card .crossimgs:hover {
-    transform: scale(1.2);
+    transform: scale(1.3);
     cursor: pointer;
 }
 
@@ -342,6 +350,13 @@ body {
 
 .card .crossimgs img{
     height: 30px;
+}
+
+.card .effectpreview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #565656;
 }
 
 .card .downloadform button[type='submit'] {
@@ -396,6 +411,30 @@ body {
     border-top: 2px solid var(--scroll);
     z-index: 97;
     transition: bottom 250ms ease-in-out;
+}
+
+.footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer a {
+    margin-top: 2px;
+}
+
+.footer a::after {
+    transition: all ease-in-out .2s;
+    background: none repeat scroll 0 0 var(--border-bottom);
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+}
+
+.footer a:hover::after {
+    width: 100%;
 }
 
 /* scrollbar */

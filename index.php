@@ -1,6 +1,7 @@
 <?php
     require_once 'autoloader/autoload.php';
     $crosshairs = new crosshairs;
+    $effects = new effects;
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +30,7 @@
                 <ul class="flex menu">
                     <li><a href="#main">Strona główna</a></li>
                     <li><a href="#crosshairs">Celowniki</a></li>
-                    <li><a href="#">Efekty</a></li>
+                    <li><a href="#effects">Efekty</a></li>
                     <li><a href="https://xyzzytactic.mtasa.eu" target="_blank">Sklep premium</a></li>
                 </ul>
             </nav>
@@ -37,7 +38,7 @@
                 <ul>
                     <li><a href="#main">Strona główna</a></li>
                     <li><a href="#crosshairs">Celowniki</a></li>
-                    <li><a href="#">Efekty</a></li>
+                    <li><a href="#effects">Efekty</a></li>
                     <li><a href="https://xyzzytactic.mtasa.eu" target="_blank">Sklep premium</a></li>
                 </ul>
             </div>
@@ -68,6 +69,14 @@
         <div class="cards">
             <?php
                 $crosshairs->showCrosshairs();
+            ?>
+        </div>
+        <div class="text-header effects">
+            <h1>Efekty</h1>
+        </div>
+        <div class="cards" id="effects">     
+            <?php
+                $effects->showEffects();
             ?>
         </div>
     </div>
