@@ -15,8 +15,8 @@
                         echo "</div>";
 
                         echo "<div class='downloadform'>";
-                            echo "<form action='src/download.php?effect_id=$row[0]' method='POST'>";
-                                echo "<button type='submit'><i class='fa-solid fa-download'></i> Pobierz</button>";
+                            echo "<form action='src/download.php' method='POST'>";
+                                echo "<button type='submit' name='effect_id' value='$row[0]'><i class='fa-solid fa-download'></i> Pobierz</button>";
                             echo "</form>";
                         echo "</div>";
 

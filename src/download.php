@@ -6,21 +6,13 @@
     $crosshairs = new crosshairs;
     $effects = new effects;
 
-    if(isset($_GET['crosshair_id'])) {
-        $crosshair_id = $_GET['crosshair_id'];
-        if($crosshairs->downloadCrosshair($crosshair_id))
-            header('Location: ../index.php');
-        else
-            http_response_code(404);
-            die();
+    if(isset($_POST['crosshair_id'])) {
+        $crosshair_id = $_POST['crosshair_id'];
+        $crosshairs->downloadCrosshair($crosshair_id);
     }
 
-    if(isset($_GET['effect_id'])) {
-        $effect_id = $_GET['effect_id'];
-        if($effects->downloadEffect($effect_id))
-            header('Location: ../index.php');
-        else
-            http_response_code(404);
-            die();
+    if(isset($_POST['effect_id'])) {
+        $effect_id = $_POST['effect_id'];
+        $effects->downloadEffect($effect_id);
     }
 ?>
